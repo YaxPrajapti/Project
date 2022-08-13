@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;600&family=Fjalla+One&family=Poppins:ital,wght@0,200;0,300;0,900;1,300;1,400;1,600&display=swap');
+
+
+.light {
+    --mainColor: rgb(95, 167, 249);
+    --hoverColor: rgb(96, 139, 217);
+    --backgroundColor: rgb(240, 240, 252);
+    --darkOne: rgb(18, 20, 20);
+    --darkTwo: rgb(48, 48, 66);
+    --lightOne: rgb(80, 108, 125);
+    --lightTwo: rgb(109, 116, 134);
+}
+
+.dark {
+    --mainColor: rgb(95, 167, 249);
+    --hoverColor: rgb(96, 139, 217);
+    --backgroundColor: rgb(37, 37, 63);
+    --darkOne: rgb(229, 253, 254);
+    --darkTwo: rgb(255, 255, 255);
+    --lightOne: rgb(173, 176, 178);
+    --lightTwo: rgb(196, 197, 198);
+}
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    font-family: 'poppins', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.big-wrapper {
+    padding: 1.7rem 0 2rem;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    position: relative;
+    max-width: 79rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 60px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    margin-right: 0.6rem;
+    margin-top: -0.8rem;
+}
+
+.logo h3 {
+    color: var(--darkOne);
+    font-size: 1.7rem;
+    line-height: 1.5;
+    font-weight: 750;
+}
+
+.links ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.links a {
+    color: var(--lightOne);
+    margin-left: 4.5rem;
+    display: inline-block;
+}
+
+.links a:hover {
+    color: var(--hoverColor);
+    transform: scale(1.06);
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.9rem 1.9rem;
+    color: rgb(248, 253, 255) !important;
+    background-color: var(--mainColor);
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+
+.btn:hover{
+    background-color: var(--hoverColor);
+    color: rgb(255, 255, 255) !important;
+}
+
+.showcase-area .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-title {
+    font-size: 1.4rem;
+    color: var(--darkOne);
+    text-transform: capitalize;
+    line-height: 1.4;
+}
+
+.text {
+    color: var(--lightOne);
+    font-size: 1.1rem;
+    margin: 1.9rem 0 2.5rem;
+    max-width: 600px;
+    line-height: 2.2;
+}
+
+.theme{
+    width: 155%;
+    transform: translate(10%, 25px);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 29px 0px;;
+}
+
+.toggle-btn { 
+    display: inline-block;
+    border: none;
+    background: var(--darkTwo);
+    color: var(--backgroundColor);
+    outline: none;
+    cursor: pointer;
+    height: 39px;
+    width: 39px;
+    border-radius: 40%;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.toggle-btn i{
+    line-height: 39px;
+}
+
+.big-wrapper.light .toggle-btn i:last-child{
+    display: none;
+}
+
+.big-wrapper.light .toggle-btn i:first-child{
+    display: block;
+}
+
+.big-wrapper.dark .toggle-btn i:last-child{
+    display: block;
+}
+
+.big-wrapper.dark .toggle-btn i:first-child{
+    display: none;
+}
+
+.toggle-btn:hover {
+    background: var(--mainColor);
+}
+
+.copy{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    animation: appear 1s 1 both;
+}
+
+@keyframes appear{
+    0% {
+        clip-path: circle(30% at -25% -25%);
+    }
+    100% {
+        clip-path: circle(150% at 0 0);
+    }
+}

@@ -16,6 +16,10 @@ app.use('/css', express.static(path.resolve(__dirname, 'assets/css')));
 app.use('/img', express.static(path.resolve(__dirname, 'assets/img')));
 app.use('/js', express.static(path.resolve(__dirname, 'assets/js')));
 
+app.get('/', async (req, res) => {
+    res.render('landing')
+})
+
 app.get('/login', async (req, res) => {
     res.render('login')
 })
