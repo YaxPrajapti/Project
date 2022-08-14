@@ -140,9 +140,10 @@ header .container {
 }
 
 .theme{
-    width: 155%;
+    width: 95%;
     transform: translate(10%, 25px);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 29px 0px;;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 29px 0px;
+    border-radius: 10px;
 }
 
 .toggle-btn { 
