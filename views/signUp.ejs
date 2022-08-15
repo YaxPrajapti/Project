@@ -4,31 +4,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"  href="css/signUp.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <title>Login Page</title>
     </head>
     <body>
-
         <section class="login py-5 bg-light">
             <div class="container">
                 <div class="row g-0">
                     <div class="col-lg-5">
-                        <img src="img/Eventrra.png" class="img-fluid" alt="Not found">
+                        <img src="img/signUpImage.svg" class="img-fluid" alt="Not found">
                     </div>
                     <div class="col-lg-7 text-center py-5"> 
-                        <h1 class="tracking-in-expand texthead">Welcome</h1>
+                        <h1 class="tracking-in-expand texthead">Register yourself</h1>
 
-                        <form action="/api/loginUsers", method="post" id="loginform">
+                        <form action="/api/createUsers" method="post">
                             <div class="form-row py-3 pt-5">
                                 <div class="offset-1 col-lg-10">
-                                    <input class="inp px-2" type="text" placeholder="UserName" name="username">
+                                    <input class="inp px-2" name="name" type="text" placeholder="Name">
                                 </div>
                             </div>
                             <div class="form-row py-2">
                                 <div class="offset-1 col-lg-10">
-                                    <input class="inp px-2" type="password" placeholder="Password" name="password">
+                                    <input class="inp px-2" name="email" type="email" placeholder="email">
+                                </div>
+                            </div>
+                            <div class="form-row py-2">
+                                <div class="offset-1 col-lg-10">
+                                    <input class="inp px-2" name="username" type="text" placeholder="UserName">
+                                </div>
+                            </div>
+                            <div class="form-row py-3">
+                                <div class="offset-1 col-lg-10">
+                                    <input class="inp px-2" name="password" type="password" placeholder="Password">
                                 </div>
                             </div>
                             <div class="form-row py-4">
@@ -44,6 +52,6 @@
         </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
+    <script src="js/index.js"></script>    
 </body>
 </html>
