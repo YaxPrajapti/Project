@@ -15,6 +15,7 @@ route.get('/', services.homeroute);
  */
 route.get('/login', services.loginroute);
 
+route.get('/signUp', services.signUproute)
 
 
 /**

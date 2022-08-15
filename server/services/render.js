@@ -9,3 +9,8 @@ exports.loginroute = (req, res) => {
     console.log("Requested for login page");
     res.render('login');
 }
+
+exports.signUproute = (req, res) => {
+    console.log("Requested for signUp page");
+    res.render('signUp');
+}
