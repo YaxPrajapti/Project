@@ -18,30 +18,30 @@
                     <div class="col-lg-7 text-center py-5"> 
                         <h1 class="tracking-in-expand texthead">Register yourself</h1>
 
-                        <form action="">
+                        <form action="/api/createUsers" method="post">
                             <div class="form-row py-3 pt-5">
                                 <div class="offset-1 col-lg-10">
-                                    <input class="inp px-2" name="userdbs[name]" type="text" placeholder="Name">
+                                    <input class="inp px-2" name="name" type="text" placeholder="Name">
                                 </div>
                             </div>
                             <div class="form-row py-2">
                                 <div class="offset-1 col-lg-10">
-                                    <input class="inp px-2" name="userdbs[email]" type="email" placeholder="email">
+                                    <input class="inp px-2" name="email" type="email" placeholder="email">
                                 </div>
                             </div>
                             <div class="form-row py-2">
                                 <div class="offset-1 col-lg-10">
-                                    <input class="inp px-2" name="userdbs[username]" type="text" placeholder="UserName">
+                                    <input class="inp px-2" name="username" type="text" placeholder="UserName">
                                 </div>
                             </div>
                             <div class="form-row py-3">
                                 <div class="offset-1 col-lg-10">
-                                    <input class="inp px-2" name="userdbs[password]" type="password" placeholder="Password">
+                                    <input class="inp px-2" name="password" type="password" placeholder="Password">
                                 </div>
                             </div>
                             <div class="form-row py-4">
                                 <div class="offset-1 col-lg-10">
-                                    <button class="btn1">Sign in</button>
+                                    <button class="btn1" type="submit">Sign in</button>
                                 </div>
                             </div>
                         </form>
@@ -52,5 +52,6 @@
         </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </body>
+    <script src="js/index.js"></script>    
+</body>
 </html>

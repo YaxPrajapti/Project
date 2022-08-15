@@ -7,7 +7,7 @@ const controller = require('../controller/controller')
  * @description: Home route;
  * @method: GET/
  */
-route.get('/', services.homeroute);
+route.get('/', services.landingRoute);
 
 /**
  * @description: login page;

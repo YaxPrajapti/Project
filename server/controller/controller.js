@@ -1,4 +1,8 @@
 const userDB = require('../model/userModel');
+const dotenv= require('dotenv');
+
+dotenv.config({ path: 'config.env' });
+const port = process.env.PORT || 3000;
 
 exports.createNewUser = (req, res) => {
     //check if the body is empty.
@@ -20,7 +24,7 @@ exports.createNewUser = (req, res) => {
                         .save(user)
                         .then(data => {
                             console.log(data);
-                            res.send(data);
+                            res.redirect(`http://localhost:${port}`); // remove this after completion of the next page.    
                         })
                         .catch(err => {
                             res.status(500).send({ message: err.message || "An error occured while saving user details to the databse." })
@@ -39,15 +43,15 @@ exports.loginUser = (req, res) => {
     if(!req.body){
         return res.status(500).send("Please fill all fields.");
     }else{
-        username = req.body.username;
-        password = req.body.password;
-        const user = userDB.findOne({username: username, password: password})
-        if(!user){
-            res.status(404).send("User may not exist. Try to sign up");
-        }else{
-            if(user.username !== username || user.password !== password){
-                res.status(400).send("Invalid login credentials.");
+         const {username, password} = req.body;
+         userDB.findOne({username: username, password: password})
+         .then(data => {
+            if(!data){
+                res.send("User with this credentials does not exits.");
+            }else{
+                console.log(data)
+                res.redirect(`http://localhost:${port}`); // remove this after completion of the next page. 
             }
-        }
+         })
     }
 }
