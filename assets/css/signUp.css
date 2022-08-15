@@ -15,6 +15,8 @@
 }
 
 .login img{
+    padding-top: 150px;
+    padding-left: 10px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
@@ -62,7 +64,7 @@ box-shadow: 10px 8px 35px 4px rgba(83,120,130,0.67);
     outline: none;
     border-radius: 30px;
     font-weight: 600;
-    background: rgb(54, 240, 54);
+    background: rgb(71, 124, 238);
     color: white;
 }
 
@@ -72,5 +74,5 @@ box-shadow: 10px 8px 35px 4px rgba(83,120,130,0.67);
 }
 
 .btn1:hover{
-    background:rgb(37, 195, 37);
+    background:rgb(98, 145, 239);
 }
