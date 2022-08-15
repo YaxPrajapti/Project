@@ -22,6 +22,7 @@ route.get('/login', services.loginroute);
  * 
  *  */
 // route.get('/api/users', controller.finduserForLogin);
-route.post('/api/users', controller.createNewUser);
+route.post('/api/loginUsers', controller.loginUser);
+route.post('/api/createUsers', controller.createNewUser);
 
 module.exports = route;
