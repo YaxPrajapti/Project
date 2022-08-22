@@ -1,5 +1,8 @@
 const userDB = require('../model/userModel');
-const UserModel = require('../model/userModel');
+const dotenv= require('dotenv');
+
+dotenv.config({ path: 'config.env' });
+const port = process.env.PORT || 3000;
 
 exports.createNewUser = (req, res) => {
     //check if the body is empty.
@@ -14,14 +17,24 @@ exports.createNewUser = (req, res) => {
         });
 
         //save the user to database
-        user
-            .save(user)
+        userDB.findOne({ email: req.body.email })
             .then(data => {
-                console.log(data);
-                res.send(data);
-            })
-            .catch(err => {
-                res.status(500).send({message: err.message || "An error occured while saving user details to the databse."})
+                if (!data) {
+                    user
+                        .save(user)
+                        .then(data => {
+                            console.log(data);
+                            res.redirect(`http://localhost:${port}`); // remove this after completion of the next page.    
+                        })
+                        .catch(err => {
+                            res.status(500).send({ message: err.message || "An error occured while saving user details to the databse." })
+                        })
+                }
+                else{
+                    res.send('user already exist');
+                }
+            }).catch(err => {
+                res.status(500).send({message: err.message || "An error occured"});
             })
     }
 }
