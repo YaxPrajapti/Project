@@ -43,15 +43,15 @@ exports.loginUser = (req, res) => {
     if(!req.body){
         return res.status(500).send("Please fill all fields.");
     }else{
-         const {username, password} = req.body;
-         userDB.findOne({username: username, password: password})
-         .then(data => {
+            const {username, password} = req.body;
+            userDB.findOne({username: username, password: password})
+            .then(data => {
             if(!data){
                 res.send("User with this credentials does not exits.");
             }else{
                 console.log(data)
                 res.redirect(`http://localhost:${port}`); // remove this after completion of the next page. 
             }
-         })
+        })
     }
 }
