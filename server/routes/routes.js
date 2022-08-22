@@ -7,7 +7,7 @@ const controller = require('../controller/controller')
  * @description: Home route;
  * @method: GET/
  */
-route.get('/', services.homeroute);
+route.get('/', services.landingRoute);
 
 /**
  * @description: login page;
@@ -22,6 +22,7 @@ route.get('/signUp', services.signUproute);
  * 
  *  */
 // route.get('/api/users', controller.finduserForLogin);
-route.post('/api/users', controller.createNewUser);
+route.post('/api/loginUsers', controller.loginUser);
+route.post('/api/createUsers', controller.createNewUser);
 
 module.exports = route;
