@@ -1,0 +1,26 @@
+.light {
+    --mainColor: rgb(95, 167, 249);
+    --hoverColor: rgb(96, 139, 217);
+    --backgroundColor: rgb(240, 240, 252);
+    --darkOne: rgb(18, 20, 20);
+    --darkTwo: rgb(48, 48, 66);
+    --lightOne: rgb(80, 108, 125);
+    --lightTwo: rgb(109, 116, 134);
+}
+
+.dark {
+    --mainColor: rgb(95, 167, 249);
+    --hoverColor: rgb(96, 139, 217);
+    --backgroundColor: rgb(37, 37, 63);
+    --darkOne: rgb(229, 253, 254);
+    --darkTwo: rgb(255, 255, 255);
+    --lightOne: rgb(173, 176, 178);
+    --lightTwo: rgb(196, 197, 198);
+}
+
+.footer {
+    background-color: var(--darkOne);
+    color: var(--lightOne);
+    padding: 0px 2%;
+    margin-top: auto;
+}
