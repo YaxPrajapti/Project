@@ -15,8 +15,7 @@ route.get('/', services.landingRoute);
  */
 route.get('/login', services.loginroute);
 
-route.get('/signUp', services.signUproute)
-
+route.get('/signUp', services.signUproute);
 
 /**
  * @description: API calls to databse related stuffs. 
