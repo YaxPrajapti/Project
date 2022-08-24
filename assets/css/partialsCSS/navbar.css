@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;600&family=Fjalla+One&family=Poppins:ital,wght@0,200;0,300;0,900;1,300;1,400;1,600&display=swap');
+
+.light {
+    --mainColor: rgb(95, 167, 249);
+    --hoverColor: rgb(96, 139, 217);
+    --backgroundColor: rgb(240, 240, 252);
+    --darkOne: rgb(18, 20, 20);
+    --darkTwo: rgb(48, 48, 66);
+    --lightOne: rgb(80, 108, 125);
+    --lightTwo: rgb(109, 116, 134);
+}
+
+.dark {
+    --mainColor: rgb(95, 167, 249);
+    --hoverColor: rgb(96, 139, 217);
+    --backgroundColor: rgb(37, 37, 63);
+    --darkOne: rgb(229, 253, 254);
+    --darkTwo: rgb(255, 255, 255);
+    --lightOne: rgb(173, 176, 178);
+    --lightTwo: rgb(196, 197, 198);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 ;
+    background-color: var(--backgroundColor);
+}
+
+
+li, a, button {
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--lightOne);
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: var(--hoverColor);
+}
+
+button {
+    padding: 9px 25px;
+    background-color: var(--mainColor);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: var(--backgroundColor);
+}
