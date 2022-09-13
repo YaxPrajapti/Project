@@ -19,3 +19,8 @@ exports.signUproute = (req, res) => {
     console.log("Requested for signUp page");
     res.render('signUp');
 }
+
+exports.homeroute = (req, res) => {
+    console.log("Requested for Home page");
+    res.render('events/show');
+}

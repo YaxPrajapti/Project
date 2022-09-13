@@ -50,7 +50,7 @@ exports.loginUser = (req, res) => {
                 res.send("User with this credentials does not exits.");
             }else{
                 console.log(data)
-                res.redirect(`http://localhost:${port}`); // remove this after completion of the next page. 
+                res.redirect(`http://localhost:${port}/homepage`); // remove this after completion of the next page. 
             }
         })
     }
